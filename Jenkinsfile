@@ -57,6 +57,7 @@ agent any
 			            }
 			      steps {
 							sh "sudo chmod -R 777 /var/www/html"
+				                       /* sh "sudo service httpd start" */
 							sh "sudo service httpd start"
 					    }
 					 
