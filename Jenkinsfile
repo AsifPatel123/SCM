@@ -35,7 +35,7 @@ agent any
 			     agent {
 		              label {
 		                      label "Slave-1"
-				      customWorkspace "/home/ec2-user/"
+				     /* customWorkspace "/home/ec2-user/"  */
 		                    }
 		                } 
 					steps {
@@ -52,7 +52,7 @@ agent any
 			
 			           label {
 				               label "Slave-2"
-					       customWorkspace "/home/ec2-user/"
+					  /*     customWorkspace "/home/ec2-user/"   */
 			                 }
 			            }
 			      steps {
