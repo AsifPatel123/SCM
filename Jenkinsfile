@@ -16,13 +16,7 @@ agent any
 							}
 							dir ("/mnt/git/SCM"){
 							           sh "scp -r -i EC2-Linux.pem indexa.html ec2-user@10.0.2.165:/var/www/html/"
-							  }
-						 
-						       dir ("/mnt/git/"){
-						             	sh "git clone https://github.com/Suraj-1204/SCM.git -b slave2"
-						             	sh "cp -r EC2-Linux.pem /mnt/git/slave2/SCM"
-							} 
-							dir ("/mnt/git/slave2/SCM"){   
+						
 							            sh "scp -r -i EC2-Linux.pem indexb.html ec2-user@10.0.3.225:/var/www/html/"
 							
 							}
