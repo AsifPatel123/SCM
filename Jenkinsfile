@@ -3,8 +3,8 @@ pipeline {
 agent any
 		stages {
 		
-		stage ('Jenkins-Master') {
-			   /*  agent {
+		/*stage ('Jenkins-Master') {
+			    agent {
 		               label {
 		                       label "built-in"   
 		                     }     
@@ -42,12 +42,13 @@ agent any
 						  sh "sudo chmod -R 777 /var/www/html"
 						
 						        sh "sudo mv indexa.html index.html"   
-						*/	sh "sudo service httpd start"
+						*/	
 						}
-					    }
+						  sh "sudo service httpd start"
+					    } 
 				
 					
-			}
+			      }
 			
 			stage ('Slave-2'){
 			     agent {
@@ -62,8 +63,10 @@ agent any
 						  sh "sudo chmod -R 777 /var/www/html"
 						
 						        sh "sudo mv indexb.html index.html"   
-					*/		sh "sudo service httpd start"
+					*/		
+					       
 						}
+						    sh "sudo service httpd start"
 					    }
 				
 					 
