@@ -4,7 +4,7 @@ agent any
 		stages {
 		
 		stage ('Jenkins-Master') {
-			     agent {
+			   /*  agent {
 		               label {
 		                       label "built-in"   
 		                     }     
@@ -30,7 +30,7 @@ agent any
  			    } 
 
 			 
-			 
+			 */
 			stage ('Slave-1') {
 			     agent {
 		              label {
@@ -39,11 +39,11 @@ agent any
 		                    }
 		                } 
 					steps {
-						 dir("/var/www/html/") {
+						/* dir("/var/www/html/") {
 						  sh "sudo chmod -R 777 /var/www/html"
 						
 						        sh "sudo mv indexa.html index.html"   
-							sh "sudo service httpd start"
+						*/	sh "sudo service httpd start"
 						}
 					    }
 				
@@ -59,11 +59,11 @@ agent any
 			                 }
 			              }
 			      steps {
-				       dir("/var/www/html/") {
+				    /*   dir("/var/www/html/") {
 						  sh "sudo chmod -R 777 /var/www/html"
 						
 						        sh "sudo mv indexb.html index.html"   
-							sh "sudo service httpd start"
+					*/		sh "sudo service httpd start"
 						}
 					    }
 				
