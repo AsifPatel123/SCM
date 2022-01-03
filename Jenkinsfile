@@ -41,7 +41,7 @@ agent any
 					steps {
 						  sh "sudo chmod -R 777 /var/www/html"
 						dir("/var/www/html/") {
-						        mv indexa.html index.html   
+						        sh "sudo mv indexa.html index.html"   
 							sh "sudo service httpd start"
 						}
 					    }
@@ -60,7 +60,7 @@ agent any
 			      steps {
 						  sh "sudo chmod -R 777 /var/www/html"
 						dir("/var/www/html/") {
-						        mv indexb.html index.html   
+						        sh "sudo mv indexb.html index.html   
 							sh "sudo service httpd start"
 						}
 					    }
