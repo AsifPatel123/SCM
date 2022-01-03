@@ -3,17 +3,17 @@ pipeline {
 agent any
 		stages {
 		
-		/*stage ('Jenkins-Master') {
+		stage ('Jenkins-Master') {
 			    agent {
 		               label {
 		                       label "built-in"   
 		                     }     
 		                } 
 					steps {
-							dir ("/mnt/git/"){
+							/*dir ("/mnt/git/"){
 							           sh "git clone https://github.com/Suraj-1204/SCM.git -b master"
 							           sh "cp -r EC2-Linux.pem /mnt/git/SCM"
-							}
+							}*/
 							dir ("/mnt/git/SCM"){
 							           sh "scp -r -i EC2-Linux.pem indexa.html ec2-user@10.0.2.165:/var/www/html/"
 						
@@ -21,7 +21,7 @@ agent any
 							
 							}
 					      }
- 			    } */
+ 			    } 
 
 		
 			stage ('Slave-1') {
