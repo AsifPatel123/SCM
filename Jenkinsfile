@@ -32,17 +32,16 @@ agent any
 		                    }
 		                } 
 					steps {
-						dir("/var/www/html/") {
+						/*dir("/var/www/html/") {*/
 						  sh "sudo chmod -R 777 /var/www/html"
 						
-						     /*   sh "sudo mv indexa.html index.html"  */
+						      sh "sudo mv  /var/www/html/indexa.html index.html"  
 						
 						
 						  sh "sudo service httpd start"
-					    } 
-				
+					   			
 					
-			       }
+			               }
 				  }
 			
 			stage ('Slave-2'){
@@ -54,10 +53,10 @@ agent any
 			                 }
 			              }
 			      steps {
-				       dir("/var/www/html/") {
+				      /* dir("/var/www/html/") {  */
 						  sh "sudo chmod -R 777 /var/www/html"
 						
-						 /*  sh "sudo mv indexb.html index.html"   */
+						   sh "sudo mv /var/www/html/indexb.html index.html"  
 					   
 				
 						    sh "sudo service httpd start"
