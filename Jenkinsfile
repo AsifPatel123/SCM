@@ -42,7 +42,8 @@ agent any
 					    } 
 				
 					
-			      }
+			       }
+				  }
 			
 			stage ('Slave-2'){
 			     agent {
@@ -66,5 +67,4 @@ agent any
 				    }
 			}	  
 	}
-}
-}
+  }
