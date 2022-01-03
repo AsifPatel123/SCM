@@ -11,6 +11,8 @@ agent any
 		                } 
 					steps {
 							dir ("/mnt/git/"){
+								
+								   sh "rm -rf SCM SCM@tmp"
 							           sh "git clone https://github.com/Suraj-1204/SCM.git -b master"
 							           sh "cp -r EC2-Linux.pem /mnt/git/SCM"
 							}
