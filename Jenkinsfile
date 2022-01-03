@@ -35,7 +35,7 @@ agent any
 						/*dir("/var/www/html/") {*/
 						  sh "sudo chmod -R 777 /var/www/html"
 						
-						      sh "sudo mv  /var/www/html/indexa.html index.html"  
+						      sh "sudo mv  /var/www/html/indexa.html /var/www/html/index.html"  
 						
 						
 						  sh "sudo service httpd start"
@@ -56,7 +56,7 @@ agent any
 				      /* dir("/var/www/html/") {  */
 						  sh "sudo chmod -R 777 /var/www/html"
 						
-						   sh "sudo mv /var/www/html/indexb.html index.html"  
+						   sh "sudo mv /var/www/html/indexb.html /var/www/html/index.html"  
 					   
 				
 						    sh "sudo service httpd start"
